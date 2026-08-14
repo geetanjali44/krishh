@@ -14,64 +14,57 @@
     box-sizing:border-box;
 }
 
+html,
 body{
-    background:#eeeeee;
+    width:100%;
+}
+
+body{
+    background:#eee;
 }
 
 
 /* =========================
-   MAIN BANNER
+   BANNER
 ========================= */
 
 .janmashtami-banner{
+    position:relative;
+
     width:100%;
     height:420px;
 
-    position:relative;
     overflow:hidden;
 
     background:
-        radial-gradient(
-            circle at center,
-            rgba(255,255,255,.28) 0%,
-            rgba(255,255,255,.12) 28%,
-            rgba(255,255,255,0) 58%
-        ),
         linear-gradient(
             135deg,
             #f4f7f5 0%,
-            #68e99d 45%,
+            #68e99d 50%,
             #e3eae6 100%
         );
+
+    contain:layout paint;
 }
 
 
-/* =========================
-   SOFT CENTER GLOW
-========================= */
+/* LIGHT CENTER */
 
-.janmashtami-banner::before{
-    content:"";
-
+.center-glow{
     position:absolute;
-
-    width:520px;
-    height:520px;
 
     left:50%;
     top:50%;
+
+    width:420px;
+    height:420px;
 
     transform:translate(-50%,-50%);
 
     border-radius:50%;
 
     background:
-        radial-gradient(
-            circle,
-            rgba(255,255,255,.35),
-            rgba(255,255,255,.10) 45%,
-            transparent 72%
-        );
+        rgba(255,255,255,.13);
 
     pointer-events:none;
 
@@ -90,7 +83,7 @@ body{
     left:0;
 
     width:100%;
-    height:75px;
+    height:62px;
 
     z-index:30;
 
@@ -101,11 +94,11 @@ body{
 .thorana-rope{
     position:absolute;
 
-    top:8px;
-    left:-2%;
+    top:7px;
+    left:0;
 
-    width:104%;
-    height:7px;
+    width:100%;
+    height:6px;
 
     background:
         repeating-linear-gradient(
@@ -113,74 +106,45 @@ body{
             #ffd43b 0 12px,
             #ff8c00 12px 24px
         );
-
-    border-radius:50%;
 }
 
 
 .leaves{
     position:absolute;
 
-    top:12px;
     left:0;
+    top:11px;
 
     width:100%;
 
     display:flex;
 
-    align-items:flex-start;
     justify-content:space-around;
+    align-items:flex-start;
 
-    padding:0 10px;
+    padding:0 8px;
 }
 
 
 .leaf{
-    position:relative;
+    width:22px;
+    height:43px;
 
-    width:25px;
-    height:50px;
+    flex:0 0 auto;
 
-    flex-shrink:0;
-
-    background:
-        linear-gradient(
-            135deg,
-            #49c75a,
-            #08742b
-        );
+    background:#168b3a;
 
     border-radius:
-        70% 10% 70% 10%;
+        75% 15% 75% 15%;
 
-    transform:rotate(38deg);
+    transform:rotate(35deg);
 
     transform-origin:top center;
-
-    box-shadow:
-        inset 0 0 5px
-        rgba(255,255,255,.2);
 }
 
 
 .leaf:nth-child(even){
-    transform:rotate(-38deg);
-}
-
-
-.leaf::after{
-    content:"";
-
-    position:absolute;
-
-    width:1px;
-    height:36px;
-
-    left:50%;
-    top:5px;
-
-    background:
-        rgba(255,255,255,.35);
+    transform:rotate(-35deg);
 }
 
 
@@ -191,13 +155,13 @@ body{
 .utti{
     position:absolute;
 
-    top:16px;
+    top:15px;
     left:50%;
 
-    transform:translateX(-50%);
-
     width:100px;
-    height:150px;
+    height:145px;
+
+    transform:translateX(-50%);
 
     z-index:20;
 
@@ -205,7 +169,7 @@ body{
 }
 
 
-/* UTTI ROPES */
+/* ROPES */
 
 .utti-rope-left,
 .utti-rope-right{
@@ -216,7 +180,7 @@ body{
     width:3px;
     height:68px;
 
-    background:#d49a13;
+    background:#c68b0b;
 
     transform-origin:top;
 }
@@ -224,14 +188,12 @@ body{
 
 .utti-rope-left{
     left:28px;
-
     transform:rotate(17deg);
 }
 
 
 .utti-rope-right{
     right:28px;
-
     transform:rotate(-17deg);
 }
 
@@ -239,15 +201,15 @@ body{
 .utti-center-rope{
     position:absolute;
 
-    left:50%;
     top:0;
-
-    transform:translateX(-50%);
+    left:50%;
 
     width:3px;
     height:55px;
 
-    background:#e3ad20;
+    transform:translateX(-50%);
+
+    background:#d7a016;
 }
 
 
@@ -261,26 +223,17 @@ body{
     left:50%;
     top:53px;
 
-    transform:translateX(-50%);
-
     width:72px;
     height:52px;
 
-    background:
-        linear-gradient(
-            145deg,
-            #d97225,
-            #9d4214
-        );
+    transform:translateX(-50%);
+
+    background:#b9571e;
+
+    border:2px solid #ef9c4d;
 
     border-radius:
-        12px 12px 35px 35px;
-
-    border:2px solid #f7a953;
-
-    box-shadow:
-        0 5px 8px
-        rgba(0,0,0,.20);
+        12px 12px 34px 34px;
 
     z-index:5;
 }
@@ -291,19 +244,19 @@ body{
 
     position:absolute;
 
-    width:78px;
-    height:14px;
-
     left:50%;
     top:-8px;
 
+    width:77px;
+    height:13px;
+
     transform:translateX(-50%);
 
+    background:#994215;
+
+    border:3px solid #ef9c4d;
+
     border-radius:50%;
-
-    background:#a94d18;
-
-    border:3px solid #f6a148;
 }
 
 
@@ -312,11 +265,11 @@ body{
 
     position:absolute;
 
-    width:54px;
-    height:8px;
-
     left:50%;
-    top:20px;
+    top:21px;
+
+    width:52px;
+    height:8px;
 
     transform:translateX(-50%);
 
@@ -333,46 +286,40 @@ body{
     position:absolute;
 
     left:23%;
-    bottom:10px;
-
-    transform:translateX(-50%);
+    bottom:8px;
 
     height:330px;
+
+    transform:translateX(-50%);
 
     z-index:10;
 }
 
 
 .krishna-image{
+    display:block;
+
     height:100%;
     width:auto;
 
-    display:block;
-
     object-fit:contain;
 
-    animation:none;
     transform:none;
 
-    filter:
-        drop-shadow(
-            0 12px 18px
-            rgba(0,0,0,.24)
-        );
+    /* no animation */
+    animation:none;
+
+    /* lightweight shadow instead of filter */
+    filter:none;
 }
 
 
 /* =========================
-   FIXED KID WITH STICK
+   KID WITH STICK
 ========================= */
 
 .kids-play{
     position:absolute;
-
-    /*
-    Position the whole kid group
-    close to the Utti.
-    */
 
     right:3%;
     bottom:18px;
@@ -389,114 +336,59 @@ body{
 .kids-image{
     position:absolute;
 
-    /*
-    MOVE IMAGE LEFT / UP SO
-    STICK TIP TOUCHES UTTI
-    */
-
     right:0;
     bottom:0;
+
+    display:block;
 
     height:255px;
     width:auto;
 
     object-fit:contain;
 
-    display:block;
-
-    /*
-    Static image - NO RUNNING
-    NO JUMPING
-    */
-
-    animation:none;
-
-    /*
-    Slight rotation helps align
-    the stick with the pot.
-    */
-
+    /* fixed position */
     transform:
-        translateX(-75px)
-        translateY(-70px)
+        translate3d(-75px,-70px,0)
         rotate(-10deg);
 
     transform-origin:center center;
 
-    filter:
-        drop-shadow(
-            0 10px 10px
-            rgba(0,0,0,.18)
-        );
+    animation:none;
+
+    filter:none;
+
+    backface-visibility:hidden;
 }
 
 
 /* =========================
-   BACKGROUND DECORATION
-========================= */
-
-.decoration{
-    position:absolute;
-
-    border-radius:50%;
-
-    border:
-        1px solid
-        rgba(255,255,255,.18);
-
-    z-index:1;
-}
-
-
-.decoration-one{
-    width:380px;
-    height:380px;
-
-    left:-140px;
-    top:-120px;
-}
-
-
-.decoration-two{
-    width:300px;
-    height:300px;
-
-    right:-100px;
-    bottom:-90px;
-}
-
-
-/* =========================
-   GROUND GLOW
+   SIMPLE GROUND
 ========================= */
 
 .ground-glow{
     position:absolute;
 
     left:50%;
-    bottom:-55px;
+    bottom:-65px;
+
+    width:480px;
+    height:120px;
 
     transform:translateX(-50%);
-
-    width:520px;
-    height:150px;
 
     border-radius:50%;
 
     background:
-        radial-gradient(
-            ellipse,
-            rgba(255,255,255,.38),
-            rgba(255,255,255,.10) 55%,
-            transparent 75%
-        );
+        rgba(255,255,255,.22);
 
     z-index:2;
+
+    pointer-events:none;
 }
 
 
 /* =========================
-   TABLET / MOBILE
+   TABLET
 ========================= */
 
 @media(max-width:700px){
@@ -506,19 +398,27 @@ body{
     }
 
 
+    .center-glow{
+        width:340px;
+        height:340px;
+    }
+
+
     /* KRISHNA */
 
     .krishna-wrap{
         left:23%;
+
         height:270px;
-        bottom:8px;
+
+        bottom:7px;
     }
 
 
     /* UTTI */
 
     .utti{
-        top:14px;
+        top:13px;
 
         transform:
             translateX(-50%)
@@ -528,25 +428,20 @@ body{
     }
 
 
-    /* THORANA */
-
-    .thorana{
-        height:60px;
-    }
-
+    /* LEAVES */
 
     .leaf{
-        width:20px;
-        height:40px;
+        width:18px;
+        height:35px;
     }
 
 
-    /* FIXED KID */
+    /* KID */
 
     .kids-play{
         right:-2px;
         bottom:8px;
-        top:30px;
+
         width:250px;
         height:270px;
     }
@@ -556,20 +451,19 @@ body{
         height:205px;
 
         transform:
-            translateX(-50px)
-            translateY(-58px)
+            translate3d(-50px,-58px,0)
             rotate(-10deg);
     }
 
 
     .ground-glow{
-        width:420px;
+        width:380px;
     }
 }
 
 
 /* =========================
-   MOBILE 480px
+   MOBILE
 ========================= */
 
 @media(max-width:480px){
@@ -579,27 +473,27 @@ body{
     }
 
 
+    .center-glow{
+        width:300px;
+        height:300px;
+    }
+
+
     /* KRISHNA */
 
     .krishna-wrap{
         left:20%;
+
         height:235px;
-        bottom:8px;
-    }
 
-
-    /* THORANA */
-
-    .leaf{
-        width:17px;
-        height:34px;
+        bottom:7px;
     }
 
 
     /* UTTI */
 
     .utti{
-        top:10px;
+        top:9px;
 
         transform:
             translateX(-50%)
@@ -609,7 +503,15 @@ body{
     }
 
 
-    /* FIXED KID */
+    /* LEAVES */
+
+    .leaf{
+        width:15px;
+        height:30px;
+    }
+
+
+    /* KID */
 
     .kids-play{
         right:-12px;
@@ -623,39 +525,20 @@ body{
     .kids-image{
         height:165px;
 
-        /*
-        This is the main mobile
-        stick-touch position.
-        */
-
         transform:
-            translateX(-38px)
-            translateY(-48px)
+            translate3d(-38px,-48px,0)
             rotate(-10deg);
     }
 
 
-    .janmashtami-banner::before{
-        width:330px;
-        height:330px;
-    }
-
-
-    .decoration-one{
-        width:270px;
-        height:270px;
-    }
-
-
-    .decoration-two{
-        width:220px;
-        height:220px;
+    .ground-glow{
+        width:300px;
     }
 }
 
 
 /* =========================
-   VERY SMALL MOBILE
+   SMALL MOBILE
 ========================= */
 
 @media(max-width:360px){
@@ -666,15 +549,11 @@ body{
 
 
     .krishna-wrap{
-        left:22%;
+        left:21%;
+
         height:210px;
-        bottom:6px;
-    }
 
-
-    .leaf{
-        width:15px;
-        height:30px;
+        bottom:5px;
     }
 
 
@@ -687,9 +566,14 @@ body{
     }
 
 
+    .leaf{
+        width:13px;
+        height:27px;
+    }
+
+
     .kids-play{
         right:-15px;
-        bottom:0;
 
         width:175px;
         height:195px;
@@ -700,14 +584,21 @@ body{
         height:145px;
 
         transform:
-            translateX(-30px)
-            translateY(-42px)
+            translate3d(-30px,-42px,0)
             rotate(-10deg);
     }
+}
 
 
-    .ground-glow{
-        width:320px;
+/* =========================
+   REDUCE MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+        animation:none !important;
+        transition:none !important;
     }
 }
 
@@ -716,10 +607,18 @@ body{
 
 <body>
 
+
 <section class="janmashtami-banner">
 
 
-    <!-- MANGO THORANA -->
+    <!-- LIGHT BACKGROUND -->
+
+    <div class="center-glow"></div>
+
+
+    <!-- =====================
+         MANGO THORANA
+    ====================== -->
 
     <div class="thorana">
 
@@ -748,7 +647,9 @@ body{
     </div>
 
 
-    <!-- UTTI -->
+    <!-- =====================
+         UTTI
+    ====================== -->
 
     <div class="utti">
 
@@ -763,14 +664,9 @@ body{
     </div>
 
 
-    <!-- BACKGROUND DECORATION -->
-
-    <div class="decoration decoration-one"></div>
-
-    <div class="decoration decoration-two"></div>
-
-
-    <!-- KRISHNA -->
+    <!-- =====================
+         KRISHNA
+    ====================== -->
 
     <div class="krishna-wrap">
 
@@ -778,12 +674,16 @@ body{
             src="krishna.png"
             class="krishna-image"
             alt="Baby Krishna"
+            decoding="async"
+            draggable="false"
         >
 
     </div>
 
 
-    <!-- FIXED KID WITH STICK -->
+    <!-- =====================
+         FIXED KID + STICK
+    ====================== -->
 
     <div class="kids-play">
 
@@ -791,17 +691,20 @@ body{
             src="kid.png"
             class="kids-image"
             alt="Kid Hitting Utti"
+            decoding="async"
+            draggable="false"
         >
 
     </div>
 
 
-    <!-- GROUND GLOW -->
+    <!-- GROUND -->
 
     <div class="ground-glow"></div>
 
 
 </section>
+
 
 </body>
 </html>
