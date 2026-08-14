@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Krishna Janmashtami Banner</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#eeeeee;
+}
+
+
+/* =========================
+   MAIN BANNER
+========================= */
+
+.janmashtami-banner{
+    width:100%;
+    height:420px;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,.28) 0%,
+            rgba(255,255,255,.12) 28%,
+            rgba(255,255,255,0) 58%
+        ),
+        linear-gradient(
+            135deg,
+            #f4f7f5 0%,
+            #68e99d 45%,
+            #e3eae6 100%
+        );
+}
+
+
+/* =========================
+   SOFT CENTER GLOW
+========================= */
+
+.janmashtami-banner::before{
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.35),
+            rgba(255,255,255,.10) 45%,
+            transparent 72%
+        );
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+
+/* =========================
+   MANGO THORANA
+========================= */
+
+.thorana{
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:75px;
+
+    z-index:30;
+
+    pointer-events:none;
+}
+
+
+.thorana-rope{
+    position:absolute;
+
+    top:8px;
+    left:-2%;
+
+    width:104%;
+    height:7px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #ffd43b 0 12px,
+            #ff8c00 12px 24px
+        );
+
+    border-radius:50%;
+}
+
+
+.leaves{
+    position:absolute;
+
+    top:12px;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    align-items:flex-start;
+    justify-content:space-around;
+
+    padding:0 10px;
+}
+
+
+.leaf{
+    position:relative;
+
+    width:25px;
+    height:50px;
+
+    flex-shrink:0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #49c75a,
+            #08742b
+        );
+
+    border-radius:
+        70% 10% 70% 10%;
+
+    transform:rotate(38deg);
+
+    transform-origin:top center;
+
+    box-shadow:
+        inset 0 0 5px
+        rgba(255,255,255,.2);
+}
+
+
+.leaf:nth-child(even){
+    transform:rotate(-38deg);
+}
+
+
+.leaf::after{
+    content:"";
+
+    position:absolute;
+
+    width:1px;
+    height:36px;
+
+    left:50%;
+    top:5px;
+
+    background:
+        rgba(255,255,255,.35);
+}
+
+
+/* =========================
+   UTTI
+========================= */
+
+.utti{
+    position:absolute;
+
+    top:16px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100px;
+    height:150px;
+
+    z-index:20;
+
+    pointer-events:none;
+}
+
+
+/* UTTI ROPES */
+
+.utti-rope-left,
+.utti-rope-right{
+    position:absolute;
+
+    top:0;
+
+    width:3px;
+    height:68px;
+
+    background:#d49a13;
+
+    transform-origin:top;
+}
+
+
+.utti-rope-left{
+    left:28px;
+
+    transform:rotate(17deg);
+}
+
+
+.utti-rope-right{
+    right:28px;
+
+    transform:rotate(-17deg);
+}
+
+
+.utti-center-rope{
+    position:absolute;
+
+    left:50%;
+    top:0;
+
+    transform:translateX(-50%);
+
+    width:3px;
+    height:55px;
+
+    background:#e3ad20;
+}
+
+
+/* =========================
+   POT
+========================= */
+
+.utti-pot{
+    position:absolute;
+
+    left:50%;
+    top:53px;
+
+    transform:translateX(-50%);
+
+    width:72px;
+    height:52px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d97225,
+            #9d4214
+        );
+
+    border-radius:
+        12px 12px 35px 35px;
+
+    border:2px solid #f7a953;
+
+    box-shadow:
+        0 5px 8px
+        rgba(0,0,0,.20);
+
+    z-index:5;
+}
+
+
+.utti-pot::before{
+    content:"";
+
+    position:absolute;
+
+    width:78px;
+    height:14px;
+
+    left:50%;
+    top:-8px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:#a94d18;
+
+    border:3px solid #f6a148;
+}
+
+
+.utti-pot::after{
+    content:"";
+
+    position:absolute;
+
+    width:54px;
+    height:8px;
+
+    left:50%;
+    top:20px;
+
+    transform:translateX(-50%);
+
+    border-top:3px solid #ffd67b;
+    border-bottom:3px solid #ffd67b;
+}
+
+
+/* =========================
+   KRISHNA
+========================= */
+
+.krishna-wrap{
+    position:absolute;
+
+    left:23%;
+    bottom:10px;
+
+    transform:translateX(-50%);
+
+    height:330px;
+
+    z-index:10;
+}
+
+
+.krishna-image{
+    height:100%;
+    width:auto;
+
+    display:block;
+
+    object-fit:contain;
+
+    animation:none;
+    transform:none;
+
+    filter:
+        drop-shadow(
+            0 12px 18px
+            rgba(0,0,0,.24)
+        );
+}
+
+
+/* =========================
+   FIXED KID WITH STICK
+========================= */
+
+.kids-play{
+    position:absolute;
+
+    /*
+    Position the whole kid group
+    close to the Utti.
+    */
+
+    right:3%;
+    bottom:18px;
+
+    width:330px;
+    height:330px;
+
+    z-index:15;
+
+    pointer-events:none;
+}
+
+
+.kids-image{
+    position:absolute;
+
+    /*
+    MOVE IMAGE LEFT / UP SO
+    STICK TIP TOUCHES UTTI
+    */
+
+    right:0;
+    bottom:0;
+
+    height:255px;
+    width:auto;
+
+    object-fit:contain;
+
+    display:block;
+
+    /*
+    Static image - NO RUNNING
+    NO JUMPING
+    */
+
+    animation:none;
+
+    /*
+    Slight rotation helps align
+    the stick with the pot.
+    */
+
+    transform:
+        translateX(-75px)
+        translateY(-70px)
+        rotate(-10deg);
+
+    transform-origin:center center;
+
+    filter:
+        drop-shadow(
+            0 10px 10px
+            rgba(0,0,0,.18)
+        );
+}
+
+
+/* =========================
+   BACKGROUND DECORATION
+========================= */
+
+.decoration{
+    position:absolute;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    z-index:1;
+}
+
+
+.decoration-one{
+    width:380px;
+    height:380px;
+
+    left:-140px;
+    top:-120px;
+}
+
+
+.decoration-two{
+    width:300px;
+    height:300px;
+
+    right:-100px;
+    bottom:-90px;
+}
+
+
+/* =========================
+   GROUND GLOW
+========================= */
+
+.ground-glow{
+    position:absolute;
+
+    left:50%;
+    bottom:-55px;
+
+    transform:translateX(-50%);
+
+    width:520px;
+    height:150px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255,255,255,.38),
+            rgba(255,255,255,.10) 55%,
+            transparent 75%
+        );
+
+    z-index:2;
+}
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .janmashtami-banner{
+        height:340px;
+    }
+
+
+    /* KRISHNA */
+
+    .krishna-wrap{
+        left:23%;
+        height:270px;
+        bottom:8px;
+    }
+
+
+    /* UTTI */
+
+    .utti{
+        top:14px;
+
+        transform:
+            translateX(-50%)
+            scale(.82);
+
+        transform-origin:top center;
+    }
+
+
+    /* THORANA */
+
+    .thorana{
+        height:60px;
+    }
+
+
+    .leaf{
+        width:20px;
+        height:40px;
+    }
+
+
+    /* FIXED KID */
+
+    .kids-play{
+        right:-2px;
+        bottom:8px;
+        top:30px;
+        width:250px;
+        height:270px;
+    }
+
+
+    .kids-image{
+        height:205px;
+
+        transform:
+            translateX(-50px)
+            translateY(-58px)
+            rotate(-10deg);
+    }
+
+
+    .ground-glow{
+        width:420px;
+    }
+}
+
+
+/* =========================
+   MOBILE 480px
+========================= */
+
+@media(max-width:480px){
+
+    .janmashtami-banner{
+        height:310px;
+    }
+
+
+    /* KRISHNA */
+
+    .krishna-wrap{
+        left:22%;
+        height:235px;
+        bottom:8px;
+    }
+
+
+    /* THORANA */
+
+    .leaf{
+        width:17px;
+        height:34px;
+    }
+
+
+    /* UTTI */
+
+    .utti{
+        top:10px;
+
+        transform:
+            translateX(-50%)
+            scale(.74);
+
+        transform-origin:top center;
+    }
+
+
+    /* FIXED KID */
+
+    .kids-play{
+        right:-12px;
+        bottom:0;
+
+        width:200px;
+        height:220px;
+    }
+
+
+    .kids-image{
+        height:165px;
+
+        /*
+        This is the main mobile
+        stick-touch position.
+        */
+
+        transform:
+            translateX(-38px)
+            translateY(-48px)
+            rotate(-10deg);
+    }
+
+
+    .janmashtami-banner::before{
+        width:330px;
+        height:330px;
+    }
+
+
+    .decoration-one{
+        width:270px;
+        height:270px;
+    }
+
+
+    .decoration-two{
+        width:220px;
+        height:220px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media(max-width:360px){
+
+    .janmashtami-banner{
+        height:285px;
+    }
+
+
+    .krishna-wrap{
+        left:22%;
+        height:210px;
+        bottom:6px;
+    }
+
+
+    .leaf{
+        width:15px;
+        height:30px;
+    }
+
+
+    .utti{
+        transform:
+            translateX(-50%)
+            scale(.68);
+
+        transform-origin:top center;
+    }
+
+
+    .kids-play{
+        right:-15px;
+        bottom:0;
+
+        width:175px;
+        height:195px;
+    }
+
+
+    .kids-image{
+        height:145px;
+
+        transform:
+            translateX(-30px)
+            translateY(-42px)
+            rotate(-10deg);
+    }
+
+
+    .ground-glow{
+        width:320px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="janmashtami-banner">
+
+
+    <!-- MANGO THORANA -->
+
+    <div class="thorana">
+
+        <div class="thorana-rope"></div>
+
+        <div class="leaves">
+
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- UTTI -->
+
+    <div class="utti">
+
+        <div class="utti-rope-left"></div>
+
+        <div class="utti-center-rope"></div>
+
+        <div class="utti-rope-right"></div>
+
+        <div class="utti-pot"></div>
+
+    </div>
+
+
+    <!-- BACKGROUND DECORATION -->
+
+    <div class="decoration decoration-one"></div>
+
+    <div class="decoration decoration-two"></div>
+
+
+    <!-- KRISHNA -->
+
+    <div class="krishna-wrap">
+
+        <img
+            src="krishna.png"
+            class="krishna-image"
+            alt="Baby Krishna"
+        >
+
+    </div>
+
+
+    <!-- FIXED KID WITH STICK -->
+
+    <div class="kids-play">
+
+        <img
+            src="kid.png"
+            class="kids-image"
+            alt="Kid Hitting Utti"
+        >
+
+    </div>
+
+
+    <!-- GROUND GLOW -->
+
+    <div class="ground-glow"></div>
+
+
+</section>
+
+</body>
+</html>
