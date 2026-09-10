@@ -2,604 +2,767 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Krishna Janmashtami Banner</title>
-
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+>
+<title>Ganpati Mobile Banner</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 html,
 body{
-    width:100%;
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden;
+  touch-action:pan-x pan-y;
+}
+
+.ganpati-banner{
+  width:100%;
+  transform-origin:top center;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-    background:#eee;
+  background:#fff;
+  font-family:Arial,sans-serif;
 }
 
-
-/* =========================
-   BANNER
-========================= */
-
-.janmashtami-banner{
-    position:relative;
-
-    width:100%;
-    height:420px;
-
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f4f7f5 0%,
-            #68e99d 50%,
-            #e3eae6 100%
-        );
-
-    contain:layout paint;
+.ganpati-banner{
+  display:none;
 }
 
+@media(max-width:768px){
 
-/* LIGHT CENTER */
-
-.center-glow{
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
-    width:420px;
-    height:420px;
-
-    transform:translate(-50%,-50%);
-
-    border-radius:50%;
-
-    background:
-        rgba(255,255,255,.13);
-
-    pointer-events:none;
-
-    z-index:1;
-}
-
-
-/* =========================
-   MANGO THORANA
-========================= */
-
-.thorana{
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:62px;
-
-    z-index:30;
-
-    pointer-events:none;
-}
-
-
-.thorana-rope{
-    position:absolute;
-
-    top:7px;
-    left:0;
-
-    width:100%;
-    height:6px;
-
-    background:
-        repeating-linear-gradient(
-            90deg,
-            #ffd43b 0 12px,
-            #ff8c00 12px 24px
-        );
-}
-
-
-.leaves{
-    position:absolute;
-
-    left:0;
-    top:11px;
-
-    width:100%;
-
-    display:flex;
-
-    justify-content:space-around;
-    align-items:flex-start;
-
-    padding:0 8px;
-}
-
-
-.leaf{
-    width:22px;
-    height:43px;
-
-    flex:0 0 auto;
-
-    background:#168b3a;
-
-    border-radius:
-        75% 15% 75% 15%;
-
-    transform:rotate(35deg);
-
-    transform-origin:top center;
-}
-
-
-.leaf:nth-child(even){
-    transform:rotate(-35deg);
-}
-
-
-/* =========================
-   UTTI
-========================= */
-
-.utti{
-    position:absolute;
-
-    top:15px;
-    left:50%;
-
-    width:100px;
-    height:145px;
-
-    transform:translateX(-50%);
-
-    z-index:20;
-
-    pointer-events:none;
-}
-
-
-/* ROPES */
-
-.utti-rope-left,
-.utti-rope-right{
-    position:absolute;
-
-    top:0;
-
-    width:3px;
-    height:68px;
-
-    background:#c68b0b;
-
-    transform-origin:top;
-}
-
-
-.utti-rope-left{
-    left:28px;
-    transform:rotate(17deg);
-}
-
-
-.utti-rope-right{
-    right:28px;
-    transform:rotate(-17deg);
-}
-
-
-.utti-center-rope{
-    position:absolute;
-
-    top:0;
-    left:50%;
-
-    width:3px;
-    height:55px;
-
-    transform:translateX(-50%);
-
-    background:#d7a016;
-}
-
-
-/* =========================
-   POT
-========================= */
-
-.utti-pot{
-    position:absolute;
-
-    left:50%;
-    top:53px;
-
-    width:72px;
-    height:52px;
-
-    transform:translateX(-50%);
-
-    background:#b9571e;
-
-    border:2px solid #ef9c4d;
-
-    border-radius:
-        12px 12px 34px 34px;
-
-    z-index:5;
-}
-
-
-.utti-pot::before{
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-    top:-8px;
-
-    width:77px;
-    height:13px;
-
-    transform:translateX(-50%);
-
-    background:#994215;
-
-    border:3px solid #ef9c4d;
-
-    border-radius:50%;
-}
-
-
-.utti-pot::after{
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-    top:21px;
-
-    width:52px;
-    height:8px;
-
-    transform:translateX(-50%);
-
-    border-top:3px solid #ffd67b;
-    border-bottom:3px solid #ffd67b;
-}
-
-
-/* =========================
-   KRISHNA
-========================= */
-
-.krishna-wrap{
-    position:absolute;
-
-    left:23%;
-    bottom:8px;
-
-    height:330px;
-
-    transform:translateX(-50%);
-
-    z-index:10;
-}
-
-
-.krishna-image{
+  .ganpati-banner{
     display:block;
+    position:relative;
+    width:100%;
+    height:33vh;
+    min-height:245px;
+    max-height:315px;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 50% 40%,
+        #fff8ea 0%,
+        #ffe8c2 34%,
+        #f6c98c 68%,
+        #df9952 100%);
+  }
 
-    height:100%;
-    width:auto;
-
-    object-fit:contain;
-
-    transform:none;
-
-    /* no animation */
-    animation:none;
-
-    /* lightweight shadow instead of filter */
-    filter:none;
-}
-
-
-/* =========================
-   KID WITH STICK
-========================= */
-
-.kids-play{
+  /* CENTER GLOW */
+  .center-glow{
     position:absolute;
+    left:50%;
+    top:48%;
+    transform:translate(-50%,-50%);
+    width:235px;
+    height:235px;
+    border-radius:50%;
+    z-index:1;
+    background:
+      radial-gradient(circle,
+        rgba(255,255,255,.96) 0%,
+        rgba(255,239,205,.72) 42%,
+        rgba(255,194,112,.25) 67%,
+        transparent 77%);
+  }
 
-    right:3%;
-    bottom:18px;
 
-    width:330px;
-    height:330px;
-
-    z-index:15;
-
+  /* =========================================
+     REFERENCE STYLE ORANGE MANDAPAM BACKGROUND
+  ========================================= */
+  .mandapam-bg{
+    position:absolute;
+    left:5%;
+    right:5%;
+    bottom:24px;
+    height:182px;
+    z-index:2;
     pointer-events:none;
-}
+  }
 
-
-.kids-image{
+  .mandapam-main{
     position:absolute;
+    left:17%;
+    right:17%;
+    bottom:0;
+    height:166px;
+    background:#f4a154;
+    border-radius:78px 78px 0 0;
+    opacity:.92;
+  }
 
+  .mandapam-main::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:-11px;
+    transform:translateX(-50%);
+    width:46px;
+    height:24px;
+    background:#f4a154;
+    border-radius:52% 52% 0 0;
+  }
+
+  .mandapam-side{
+    position:absolute;
+    bottom:0;
+    width:27%;
+    height:136px;
+    background:#f29a4d;
+    opacity:.94;
+  }
+
+  .mandapam-side.left{
+    left:0;
+    border-radius:58px 24px 0 0;
+  }
+
+  .mandapam-side.right{
+    right:0;
+    border-radius:24px 58px 0 0;
+  }
+
+  .mandapam-arch{
+    position:absolute;
+    bottom:0;
+    width:23%;
+    height:112px;
+    background:rgba(214,116,46,.16);
+    border:2px solid rgba(255,212,153,.16);
+    border-bottom:none;
+    border-radius:52px 52px 0 0;
+  }
+
+  .mandapam-arch.a1{left:7%;}
+  .mandapam-arch.a2{left:28%;}
+  .mandapam-arch.a3{right:28%;}
+  .mandapam-arch.a4{right:7%;}
+
+  .mandapam-line{
+    position:absolute;
+    top:18px;
+    bottom:0;
+    width:2px;
+    background:rgba(255,220,164,.18);
+  }
+
+  .mandapam-line.l1{left:29%;}
+  .mandapam-line.l2{left:50%;}
+  .mandapam-line.l3{right:29%;}
+
+  .mandapam-bg::after{
+    content:"";
+    position:absolute;
+    left:0;
     right:0;
     bottom:0;
-
-    display:block;
-
-    height:255px;
-    width:auto;
-
-    object-fit:contain;
-
-    /* fixed position */
-    transform:
-        translate3d(-75px,-70px,0)
-        rotate(-10deg);
-
-    transform-origin:center center;
-
-    animation:none;
-
-    filter:none;
-
-    backface-visibility:hidden;
-}
+    height:2px;
+    background:rgba(194,99,36,.35);
+    box-shadow:0 7px 0 rgba(194,99,36,.13);
+  }
 
 
-/* =========================
-   SIMPLE GROUND
-========================= */
 
-.ground-glow{
+  /* STATIC BELLS INSIDE BACKGROUND */
+  .mandapam-bell{
     position:absolute;
+    top:30px;
+    width:26px;
+    height:82px;
+    z-index:3;
+    opacity:.28;
+  }
 
-    left:50%;
-    bottom:-65px;
+  /* small → long → small → long */
+  .mandapam-bell.b1{left:22%; top:46px;}
+  .mandapam-bell.b2{left:38%; top:12px;}
+  .mandapam-bell.b3{right:38%; top:46px;}
+  .mandapam-bell.b4{right:22%; top:12px;}
 
-    width:480px;
-    height:120px;
+  .mandapam-bell.b1 .string,
+  .mandapam-bell.b3 .string{
+    height:30px;
+  }
 
-    transform:translateX(-50%);
+  .mandapam-bell.b2 .string,
+  .mandapam-bell.b4 .string{
+    height:72px;
+  }
 
+  .mandapam-bell .string{
+    width:2px;
+    height:48px;
+    margin:auto;
+    background:rgba(255,232,176,.85);
+  }
+
+  .mandapam-bell .shape{
+    position:relative;
+    width:26px;
+    height:20px;
+    border-radius:50% 50% 24% 24%;
+    background:#ffe0a0;
+  }
+
+  .mandapam-bell .shape::before{
+    content:"";
+    position:absolute;
+    left:-3px;
+    bottom:0;
+    width:32px;
+    height:4px;
     border-radius:50%;
+    background:#ffe0a0;
+  }
 
+  .mandapam-bell .shape::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-7px;
+    transform:translateX(-50%);
+    width:6px;
+    height:8px;
+    border-radius:50%;
+    background:#f7cf84;
+  }
+
+
+  /* BELLS */
+
+  /* BELLS */
+  .bell-wrap{
+    position:absolute;
+    top:0;
+    z-index:12;
+    transform-origin:50% 0;
+    animation:bellSwing 2.4s ease-in-out infinite;
+  }
+
+  .bell-wrap.left{
+    left:20%;
+    animation-delay:-.35s;
+  }
+
+  .bell-wrap.right{
+    right:20%;
+    animation-delay:-1.1s;
+  }
+
+  @keyframes bellSwing{
+    0%,100%{
+      transform:rotate(-5deg);
+    }
+    50%{
+      transform:rotate(5deg);
+    }
+  }
+
+  .bell-chain{
+    width:2px;
+    height:34px;
+    margin:auto;
     background:
-        rgba(255,255,255,.22);
+      repeating-linear-gradient(
+        #6e471a 0 4px,
+        #c08c38 4px 7px);
+  }
 
-    z-index:2;
+  .bell{
+    position:relative;
+    width:29px;
+    height:24px;
+    border-radius:50% 50% 25% 25%;
+    background:
+      linear-gradient(90deg,
+        #71400c 0%,
+        #b77618 20%,
+        #f0c752 48%,
+        #d7a637 62%,
+        #945710 82%,
+        #613509 100%);
+    box-shadow:
+      inset 3px 2px 3px rgba(255,255,255,.35),
+      0 4px 6px rgba(77,45,11,.24);
+  }
 
+  .bell::before{
+    content:"";
+    position:absolute;
+    left:-4px;
+    bottom:0;
+    width:37px;
+    height:5px;
+    border-radius:50%;
+    background:linear-gradient(#d09a30,#77420d);
+  }
+
+  .bell::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-8px;
+    transform:translateX(-50%);
+    width:7px;
+    height:9px;
+    border-radius:50%;
+    background:#70400c;
+  }
+
+
+  /* =========================================
+     REALISTIC SIDE WALLS / PILLARS
+
+  /* =========================================
+     REALISTIC SIDE WALLS / PILLARS
+  ========================================= */
+  .wall{
+    position:absolute;
+    bottom:0;
+    width:36px;
+    height:270px;
+    z-index:4;
+    border-radius:6px 6px 0 0;
+    background:
+      linear-gradient(90deg,
+        #6f482c 0%,
+        #a87548 15%,
+        #d5aa73 38%,
+        #e5c18f 52%,
+        #bc8957 74%,
+        #7a4b2c 100%);
+    box-shadow:
+      inset 4px 0 6px rgba(255,255,255,.20),
+      inset -5px 0 7px rgba(70,37,18,.25),
+      0 5px 8px rgba(73,43,21,.18);
+  }
+
+  .wall.left{left:2px;}
+  .wall.right{right:2px;}
+
+  .wall::before{
+    content:"";
+    position:absolute;
+    left:-5px;
+    right:-5px;
+    top:-9px;
+    height:18px;
+    border-radius:5px 5px 2px 2px;
+    background:
+      linear-gradient(#ddbb88,#9d6c42);
+    box-shadow:
+      inset 0 2px 2px rgba(255,255,255,.3),
+      0 2px 3px rgba(72,42,22,.18);
+  }
+
+  .wall::after{
+    content:"";
+    position:absolute;
+    inset:8px 7px 0;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        transparent 0 22px,
+        rgba(91,56,34,.16) 22px 24px);
+    border-left:1px solid rgba(95,58,34,.20);
+    border-right:1px solid rgba(95,58,34,.20);
+  }
+
+  .wall-base{
+    position:absolute;
+    bottom:0;
+    width:48px;
+    height:18px;
+    z-index:6;
+    border-radius:5px 5px 0 0;
+    background:
+      linear-gradient(#c89966,#785033);
+    box-shadow:inset 0 3px 2px rgba(255,255,255,.20);
+  }
+
+  .wall-base.left{left:-4px;}
+  .wall-base.right{right:-4px;}
+
+  /* =========================================
+     BANANA PLANTS
+     MOVED MORE TO THE SIDES
+  ========================================= */
+  .banana-plant{
+    position:absolute;
+    bottom:-4px;
+    width:90px;
+    height:170px;
+    z-index:7;
+  }
+
+  .banana-plant.left{
+    left:-36px;
+  }
+
+  .banana-plant.right{
+    right:-36px;
+    transform:scaleX(-1);
+  }
+
+  /* STEM */
+  .banana-pole{
+    position:absolute;
+    left:43px;
+    bottom:0;
+    width:11px;
+    height:100px;
+    border-radius:45% 55% 12px 12px;
+    transform:rotate(-2deg);
+    background:
+      linear-gradient(90deg,
+        #304b23 0%,
+        #557532 15%,
+        #88a14d 30%,
+        #c4bd72 48%,
+        #879a46 68%,
+        #536f30 84%,
+        #2d4721 100%);
+    box-shadow:
+      inset 2px 0 4px rgba(255,255,230,.18),
+      inset -2px 0 4px rgba(27,55,24,.26),
+      0 4px 6px rgba(54,48,22,.15);
+  }
+
+  .banana-pole::before{
+    content:"";
+    position:absolute;
+    inset:4px 2px;
+    border-radius:inherit;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        transparent 0 15px,
+        rgba(45,67,29,.28) 15px 17px);
+  }
+
+  .banana-pole::after{
+    content:"";
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:2px;
+    height:84px;
+    border-radius:20px;
+    background:
+      linear-gradient(
+        rgba(255,255,218,.28),
+        rgba(255,255,218,.02));
+  }
+
+  /* LEAF ATTACHMENT POINT */
+  .banana-top{
+    position:absolute;
+    left:48px;
+    top:69px;
+    width:1px;
+    height:1px;
+  }
+
+  .banana-leaf{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:34px;
+    height:82px;
+    transform-origin:50% 100%;
+    border-radius:85% 12% 82% 8%;
+    overflow:hidden;
+    background:
+      linear-gradient(90deg,
+        #173e20 0%,
+        #2f6229 13%,
+        #54833a 28%,
+        #81a34e 46%,
+        #97af5b 52%,
+        #638c3e 67%,
+        #396a2e 82%,
+        #173b20 100%);
+    box-shadow:
+      inset 3px 0 5px rgba(236,246,184,.08),
+      inset -3px 0 5px rgba(17,54,22,.22),
+      0 3px 5px rgba(30,61,28,.12);
+  }
+
+  .banana-leaf::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:2px;
+    transform:translateX(-50%);
+    width:1.5px;
+    height:calc(100% - 5px);
+    background:rgba(205,216,124,.68);
+  }
+
+  .banana-leaf::after{
+    content:"";
+    position:absolute;
+    inset:6px 4px;
+    background:
+      repeating-linear-gradient(
+        158deg,
+        transparent 0 9px,
+        rgba(208,220,136,.14) 9px 10px);
+  }
+
+  .leaf-a{
+    width:32px;
+    height:78px;
+    transform:translate(-16px,9px) rotate(-4deg);
+  }
+
+  .leaf-b{
+    width:31px;
+    height:66px;
+    transform:translate(-18px,2px) rotate(-47deg);
+  }
+
+  .leaf-c{
+    width:31px;
+    height:66px;
+    transform:translate(-13px,2px) rotate(45deg);
+  }
+
+  .leaf-d{
+    width:29px;
+    height:66px;
+    transform:translate(-12px,3px) rotate(-34deg);
+  }
+
+  .leaf-e{
+    width:28px;
+    height:64px;
+    transform:translate(-19px,7px) rotate(69deg);
+  }
+
+
+
+  /* =========================================
+     BANANA TREE FLORAL TIE TO PILLAR
+  ========================================= */
+  .banana-tie{
+    position:absolute;
+    bottom:48px;
+    width:66px;
+    height:34px;
+    z-index:10;
     pointer-events:none;
+  }
+
+  .banana-tie.left{
+    left:-2px;
+  }
+
+  .banana-tie.right{
+    right:-4px;
+    transform:scaleX(-1);
+  }
+
+  /* floral garland band */
+  .banana-tie::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:11px;
+    width:58px;
+    height:10px;
+    border-radius:50%;
+    background:
+      radial-gradient(circle at 5px 5px,#f7c948 0 4px,#d98d12 4.5px 6px,transparent 6.5px),
+      radial-gradient(circle at 15px 5px,#ee8f24 0 4px,#c96a12 4.5px 6px,transparent 6.5px),
+      radial-gradient(circle at 25px 5px,#f9d85f 0 4px,#dc9b18 4.5px 6px,transparent 6.5px),
+      radial-gradient(circle at 35px 5px,#ef9d27 0 4px,#c87015 4.5px 6px,transparent 6.5px),
+      radial-gradient(circle at 45px 5px,#f7c948 0 4px,#d98d12 4.5px 6px,transparent 6.5px),
+      radial-gradient(circle at 55px 5px,#df5e2e 0 4px,#a83b22 4.5px 6px,transparent 6.5px);
+    background-repeat:no-repeat;
+    transform:rotate(-4deg);
+    filter:drop-shadow(0 1px 1px rgba(90,52,15,.22));
+  }
+
+  /* center floral knot */
+  .banana-tie::after{
+    content:"";
+    position:absolute;
+    right:-2px;
+    top:6px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:
+      radial-gradient(circle at 50% 50%,#ffd45d 0 3px,transparent 3.5px),
+      radial-gradient(circle at 50% 15%,#f0a51f 0 5px,transparent 5.5px),
+      radial-gradient(circle at 83% 48%,#e66f1e 0 5px,transparent 5.5px),
+      radial-gradient(circle at 50% 84%,#f5b52b 0 5px,transparent 5.5px),
+      radial-gradient(circle at 17% 48%,#d9582a 0 5px,transparent 5.5px);
+    filter:drop-shadow(0 2px 2px rgba(84,48,14,.25));
+  }
+
+  /* hanging flower strands */
+  .knot-tail{
+    position:absolute;
+    right:2px;
+    top:20px;
+    width:8px;
+    height:22px;
+    background:
+      radial-gradient(circle at 4px 4px,#f5b42a 0 3.5px,#ce7b12 4px 5px,transparent 5.5px),
+      radial-gradient(circle at 4px 12px,#ef8422 0 3.5px,#bf5f12 4px 5px,transparent 5.5px),
+      radial-gradient(circle at 4px 20px,#f7ca45 0 3.5px,#d48a13 4px 5px,transparent 5.5px);
+    background-repeat:no-repeat;
+    transform:rotate(17deg);
+    transform-origin:top center;
+  }
+
+  .knot-tail::after{
+    content:"";
+    position:absolute;
+    left:7px;
+    top:1px;
+    width:8px;
+    height:20px;
+    background:
+      radial-gradient(circle at 4px 4px,#d94f2b 0 3.5px,#a9321f 4px 5px,transparent 5.5px),
+      radial-gradient(circle at 4px 11px,#f0a31d 0 3.5px,#c77011 4px 5px,transparent 5.5px),
+      radial-gradient(circle at 4px 18px,#f7c43d 0 3.5px,#d28c12 4px 5px,transparent 5.5px);
+    background-repeat:no-repeat;
+    transform:rotate(-28deg);
+    transform-origin:top center;
+  }
+
+  .knot-loop,
+  .knot-cinch{
+    display:none;
+  }
+
+  /* PEETHAM */
+
+
+  /* PEETHAM */
+  .peetham{
+    position:absolute;
+    left:50%;
+    bottom:23px;
+    transform:translateX(-50%);
+    width:198px;
+    height:31px;
+    border-radius:50% 50% 20% 20%;
+    z-index:6;
+    background:
+      linear-gradient(
+        #e8c982 0%,
+        #c39146 50%,
+        #885721 100%);
+    box-shadow:0 7px 10px rgba(75,45,16,.19);
+  }
+
+  .peetham::before{
+    content:"";
+    position:absolute;
+    left:16px;
+    right:16px;
+    top:6px;
+    height:4px;
+    border-radius:20px;
+    background:rgba(255,234,169,.75);
+  }
+
+
+  /* GANESH CHATURDHI TITLE */
+.ganesh-title{
+  position:absolute;
+  left:50%;
+  top:18px;
+  transform:translateX(-50%);
+  width:100%;
+  text-align:center;
+
+  font-family:'Great Vibes', cursive;
+  font-size:29px;
+  font-weight:400;
+  line-height:0.95;
+
+  color:#ff3c06;
+  z-index:11;
+
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.85),
+    0 2px 3px rgba(92,47,18,.18);
 }
 
-
-/* =========================
-   TABLET
-========================= */
-
-@media(max-width:700px){
-
-    .janmashtami-banner{
-        height:340px;
-    }
-
-
-    .center-glow{
-        width:340px;
-        height:340px;
-    }
-
-
-    /* KRISHNA */
-
-    .krishna-wrap{
-        left:23%;
-
-        height:270px;
-
-        bottom:7px;
-    }
-
-
-    /* UTTI */
-
-    .utti{
-        top:13px;
-
-        transform:
-            translateX(-50%)
-            scale(.82);
-
-        transform-origin:top center;
-    }
-
-
-    /* LEAVES */
-
-    .leaf{
-        width:18px;
-        height:35px;
-    }
-
-
-    /* KID */
-
-    .kids-play{
-        right:-2px;
-        bottom:8px;
-        top:35px;
-        width:250px;
-        height:270px;
-    }
-
-
-    .kids-image{
-        height:205px;
-
-        transform:
-            translate3d(-50px,-58px,0)
-            rotate(-10deg);
-    }
-
-
-    .ground-glow{
-        width:380px;
-    }
+.ganesh-title span{
+  display:block;
+  white-space:nowrap;
 }
 
+  /* VINAYAKA IMAGE */
+  .vinayaka{
+    position:absolute;
+    left:50%;
+    bottom:29px;
+    transform:translateX(-50%);
+    height:72%;
+    max-height:150px;
+    object-fit:contain;
+    z-index:8;
+    filter:drop-shadow(0 10px 9px rgba(78,46,14,.21));
+  }
 
-/* =========================
-   MOBILE
-========================= */
+  /* TEXT */
 
-@media(max-width:480px){
-
-    .janmashtami-banner{
-        height:310px;
-    }
-
-
-    .center-glow{
-        width:300px;
-        height:300px;
-    }
-
-
-    /* KRISHNA */
-
-    .krishna-wrap{
-        left:20%;
-
-        height:235px;
-
-        bottom:7px;
-    }
-
-
-    /* UTTI */
-
-    .utti{
-        top:9px;
-
-        transform:
-            translateX(-50%)
-            scale(.74);
-
-        transform-origin:top center;
-    }
-
-
-    /* LEAVES */
-
-    .leaf{
-        width:15px;
-        height:30px;
-    }
-
-
-    /* KID */
-
-    .kids-play{
-        right:-12px;
-        bottom:0;
-
-        width:200px;
-        height:220px;
-    }
-
-
-    .kids-image{
-        height:165px;
-
-        transform:
-            translate3d(-38px,-48px,0)
-            rotate(-10deg);
-    }
-
-
-    .ground-glow{
-        width:300px;
-    }
+  /* TEXT */
+  .ganpati-text{
+    position:absolute;
+    left:50%;
+    bottom:4px;
+    transform:translateX(-50%);
+    width:100%;
+    text-align:center;
+    z-index:12;
+    color:#6d3c12;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.6px;
+    text-shadow:
+      0 1px 2px #fff,
+      0 0 5px rgba(255,255,255,.8);
+  }
 }
 
+@media(max-width:380px){
 
-/* =========================
-   SMALL MOBILE
-========================= */
+  .ganpati-banner{
+    height:31vh;
+    min-height:230px;
+  }
 
-@media(max-width:360px){
+  .vinayaka{
+    height:69%;
+  }
 
-    .janmashtami-banner{
-        height:285px;
-    }
+  .banana-plant.left{
+    left:-42px;
+  }
 
+  .banana-plant.right{
+    right:-42px;
+  }
 
-    .krishna-wrap{
-        left:21%;
-
-        height:210px;
-
-        bottom:5px;
-    }
-
-
-    .utti{
-        transform:
-            translateX(-50%)
-            scale(.68);
-
-        transform-origin:top center;
-    }
-
-
-    .leaf{
-        width:13px;
-        height:27px;
-    }
-
-
-    .kids-play{
-        right:-15px;
-
-        width:175px;
-        height:195px;
-    }
-
-
-    .kids-image{
-        height:145px;
-
-        transform:
-            translate3d(-30px,-42px,0)
-            rotate(-10deg);
-    }
-}
-
-
-/* =========================
-   REDUCE MOTION
-========================= */
-
-@media(prefers-reduced-motion:reduce){
-
-    *{
-        animation:none !important;
-        transition:none !important;
-    }
+  .wall{
+    width:32px;
+  }
 }
 
 </style>
@@ -607,104 +770,118 @@ body{
 
 <body>
 
+<section class="ganpati-banner">
 
-<section class="janmashtami-banner">
+  <!-- REFERENCE STYLE ORANGE BACKGROUND -->
+  <div class="mandapam-bg" aria-hidden="true">
+    <div class="mandapam-main"></div>
+    <div class="mandapam-side left"></div>
+    <div class="mandapam-side right"></div>
 
+    <span class="mandapam-arch a1"></span>
+    <span class="mandapam-arch a2"></span>
+    <span class="mandapam-arch a3"></span>
+    <span class="mandapam-arch a4"></span>
 
-    <!-- LIGHT BACKGROUND -->
+    <span class="mandapam-line l1"></span>
+    <span class="mandapam-line l2"></span>
+    <span class="mandapam-line l3"></span>
 
-    <div class="center-glow"></div>
-
-
-    <!-- =====================
-         MANGO THORANA
-    ====================== -->
-
-    <div class="thorana">
-
-        <div class="thorana-rope"></div>
-
-        <div class="leaves">
-
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-            <div class="leaf"></div>
-
-        </div>
-
+    <!-- STATIC BACKGROUND BELLS -->
+    <div class="mandapam-bell b1">
+      <div class="string"></div>
+      <div class="shape"></div>
     </div>
-
-
-    <!-- =====================
-         UTTI
-    ====================== -->
-
-    <div class="utti">
-
-        <div class="utti-rope-left"></div>
-
-        <div class="utti-center-rope"></div>
-
-        <div class="utti-rope-right"></div>
-
-        <div class="utti-pot"></div>
-
+    <div class="mandapam-bell b2">
+      <div class="string"></div>
+      <div class="shape"></div>
     </div>
-
-
-    <!-- =====================
-         KRISHNA
-    ====================== -->
-
-    <div class="krishna-wrap">
-
-        <img
-            src="krishna.png"
-            class="krishna-image"
-            alt="Baby Krishna"
-            decoding="async"
-            draggable="false"
-        >
-
+    <div class="mandapam-bell b3">
+      <div class="string"></div>
+      <div class="shape"></div>
     </div>
-
-
-    <!-- =====================
-         FIXED KID + STICK
-    ====================== -->
-
-    <div class="kids-play">
-
-        <img
-            src="kid.png"
-            class="kids-image"
-            alt="Kid Hitting Utti"
-            decoding="async"
-            draggable="false"
-        >
-
+    <div class="mandapam-bell b4">
+      <div class="string"></div>
+      <div class="shape"></div>
     </div>
+  </div>
 
 
-    <!-- GROUND -->
+<div class="center-glow"></div>
 
-    <div class="ground-glow"></div>
+  <!-- BELLS -->
+  <div class="bell-wrap left">
+    <div class="bell-chain"></div>
+    <div class="bell"></div>
+  </div>
+
+  <div class="bell-wrap right">
+    <div class="bell-chain"></div>
+    <div class="bell"></div>
+  </div>
+
+  <!-- REALISTIC SIDE WALLS -->
+  <div class="wall left"></div>
+  <div class="wall right"></div>
+  <div class="wall-base left"></div>
+  <div class="wall-base right"></div>
+
+
+  <!-- BANANA TREES TIED TO SIDE PILLARS -->
+  <div class="banana-tie left">
+    <span class="knot-loop"></span>
+    <span class="knot-cinch"></span>
+    <span class="knot-tail"></span>
+  </div>
+
+  <div class="banana-tie right">
+    <span class="knot-loop"></span>
+    <span class="knot-cinch"></span>
+    <span class="knot-tail"></span>
+  </div>
+<!-- LEFT BANANA PLANT -->
+  <div class="banana-plant left">
+    <div class="banana-pole"></div>
+    <div class="banana-top">
+      <span class="banana-leaf leaf-a"></span>
+      <span class="banana-leaf leaf-b"></span>
+      <span class="banana-leaf leaf-c"></span>
+      <span class="banana-leaf leaf-d"></span>
+      <span class="banana-leaf leaf-e"></span>
+    </div>
+  </div>
+
+  <!-- RIGHT BANANA PLANT -->
+  <div class="banana-plant right">
+    <div class="banana-pole"></div>
+    <div class="banana-top">
+      <span class="banana-leaf leaf-a"></span>
+      <span class="banana-leaf leaf-b"></span>
+      <span class="banana-leaf leaf-c"></span>
+      <span class="banana-leaf leaf-d"></span>
+      <span class="banana-leaf leaf-e"></span>
+    </div>
+  </div>
+
+ <div class="ganesh-title">
+  <span>Everything For</span>
+  <span>Bappa's Stapana</span>
+</div>
+
+
+
+  <!-- PEETHAM -->
+  <div class="peetham"></div>
+
+  <!-- ONLY EXTERNAL IMAGE -->
+  <img
+    src="vinayaka.png"
+    class="vinayaka"
+    alt="Lord Ganesh"
+  >
 
 
 </section>
-
 
 </body>
 </html>
